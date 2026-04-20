@@ -56,10 +56,39 @@ console.log(square(4));
  const greatuser =name =>{
     console.log(`hello, ${name}!`);
  }
-greatuser("uttam");
+greatuser("uttam");   //hello, uttam!
 
 //Map on array 
+// .map() is an array method
+// It loops through each element & applies a function to each elements and then return new array
 //Map creates a new array by applying a function to each element of the original way 
 let newarray=[1,2,3,4,5];
-let squaredarray= newarray.map((num) => num*num);
-console.log(squaredarray);
+let squaredarray= newarray.map((num) => num*num);  
+console.log(squaredarray);    //[ 1, 4, 9, 16, 25 ]
+const sum_1 =(a,b)=>(a+b);
+console.log(sum_1(4,5));    //9
+
+//Filter on array
+//Filter creates a new array with all elements that pass the test implemented by provided function
+
+let evenNumbers =[1,2,3,4,5,6,7,8,9];
+let filteredEvenNumbers = evenNumbers.filter(num => num % 2 == 0);
+console.log(filteredEvenNumbers);   //[ 2, 4, 6, 8 ]
+
+//Reduce on the function
+
+let sum_2=[1,2,3,4,5];
+let total = sum_2.reduce((previous,current) => previous+current,0);
+console.log(total);  //15
+
+let students=[{name:"Uttam",marks:99},{name:"Raj",marks:89},{name:"rahul",marks:98}];
+  //map to get marks of all students 
+  let marks =students.map(obtain =>obtain.marks);
+  console.log(marks);   //[ 99, 89, 98 ]
+
+  let names = students.map(name=> name.name);
+  console.log(names);
+
+  let totalmarks=students.reduce((acc,students)=> acc +students.marks,0);
+  
+  console.log(totalmarks);   //286
