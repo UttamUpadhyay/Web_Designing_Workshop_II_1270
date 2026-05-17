@@ -1,24 +1,22 @@
-// import StudentCard from "./StudentCard";
+import StudentCard from "./StudentCard";
 
-// function App() {
-//   return (
-//     <div className="App_Class">
-//     <h1>Student Card App</h1>
-//     <StudentCard name="VADANT" course="Computer Science" marks="85"/>
-//     <StudentCard name="SACHIN" course="Information Technology" marks="90"/>
-//     <StudentCard name="RAHUL" course="Electronics" marks="80"/>
-//     </div>
-//   );
-// }
-// export default App;
-
-
-function App(){
-  return(
-    <div>
-      <h1>Current Score: {score}</h1>
-      <button onClick={() => setScore(score + 1)}>Increase Score</button>
+function App() {
+  return (
+    <div className="App_Class">
+    <h1>Student Information</h1>
+    
+    <div className="container">
+    <StudentCard name="Ranapratap" course="Computer Science" marks="96"/></div>
+    <div className="container">
+    <StudentCard name="Mohit Sharma" course="Information Technology" marks="90"/>
+    </div>
+    <div className="container">
+    <StudentCard name="Saurabh Kalia" course="Electronics" marks="91"/>
+    </div>
     </div>
   );
+  
 }
 export default App;
+
+
